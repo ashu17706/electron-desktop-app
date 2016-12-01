@@ -1,0 +1,60 @@
+html,
+body {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: -apple-system, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+header {
+	text-align: center;
+	width: 100%;
+	height: auto;
+	border: 1px solid red;
+}
+
+header h1 {
+	font-size: 60px;
+	font-weight: 100;
+	margin: 0;
+	padding: 0;
+}
+
+.nav-button {
+	color: black;
+
+}
+
+.menu-item {
+	border-right: 1px solid #000;
+	padding-right: 10px;
+}
+
+.is-selected {
+	color: red;
+}
+
+.js-section {
+	display: none;
+}
+
+.is-shown {
+	display: block;
+}
+
+main {
+	margin: 20px;
+	border: 1px solid #ccc;
+	height: 500px;
+}
+
+footer {
+	height: 20px;
+	position:fixed;
+	bottom: 0;
+	left: 0;
+	border: 1px solid #ddd;
+	width: 100%;
+}
