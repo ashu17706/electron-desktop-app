@@ -1,8 +1,18 @@
 <template class="task-template">
   <section id="addmed-section" class="js-section">
     <h3>Add New Medicine</h3>
-    PMSO No: <input type="number" name="PMSO No" value="">
-    Name: <input type="text" name="Name" value="">
-    Expiry Date: <input type="date" name="Expiry Date" value="">
+    <form id="medicineForm">
+      PMSO No: <input type="number" name="pmsono"  placeholder="PMSO No" value="">
+      Name: <input type="text" name="name" placeholder="Name" value="" list="names">
+      <div class="search-result-hide" id="show">
+        <div class="search-item">Item 1</div>
+      </div>
+      Expiry Date: <input type="date" name="expiry" placeholder="Expiry Date" value="">
+      <button id="medicinAddBtn" class="button">Add Medicine</button>
+    </form>
+    <template id="result-template" class="js-section"><div class="search-item">Item 1</div></template>
+    <script type="text/javascript">
+      require('./renderer-process/addmed');
+    </script>
   </sction>
 </template>

@@ -58,3 +58,11 @@ footer {
 	border: 1px solid #ddd;
 	width: 100%;
 }
+
+.search-result-hide {
+	display: none;
+}
+
+.search-result-show {
+	display: block;
+}
