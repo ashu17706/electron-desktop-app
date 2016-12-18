@@ -6,7 +6,10 @@ const Q = require('q');
 
 const Medicine = class Medicine {
   constructor() {
-    db = new Datastore();
+    db = new Datastore({
+      filename: '/Users/ashuthezero8/work/medical-electron-app/medicine.db',
+      autoload: true,
+    });
   };
 
   create(doc) {
@@ -36,19 +39,30 @@ const Medicine = class Medicine {
   };
 
   //update medicine details
-  update(id) {
-    db.update({ _id: id }, )
+  update(id, update) {
+    let deferred = Q.defer();
+
+    db.update({ _id: id }, update, {}, (err, numUpdated) => {
+      console.log('CRUD update', err, numUpdated);
+      if (err) {
+        deferred.reject(err);
+      } else {
+        deferred.resolve(numUpdated);
+      }
+    });
+
+    return deferred.promise;
   };
 
   // delete any medicine by _id
   delete(id) {
     let deferred = Q.defer();
 
-    db.remove({ _id: id }, {}, (err, numRemoved) => {
+    db.remove({ _id: id }, {}, (err, deleteCount) => {
       if (err) {
         deferred.reject(err);
       } else {
-        deferred.resolve(numRemovd);
+        deferred.resolve(deleteCount);
       }
     });
 
@@ -83,6 +97,8 @@ if (require.main == module) {
   let med = new Medicine();
 
   med.create({ name: 'paracetamol' });
+  med.create({ name: 'paracetamol 2' });
+  med.create({ name: 'paracetamol 3' });
 
   med.search('name', 'para')
   .then((res) => {
