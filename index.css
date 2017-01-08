@@ -1,30 +1,64 @@
 html,
-body {
+body,
+ul,
+li {
 	padding: 0;
 	margin: 0;
 }
 
 body {
 	font-family: -apple-system, 'Helvetica Neue', Helvetica, sans-serif;
+	background-color: #eaeaea;
 }
 
-header {
-	text-align: center;
-	width: 100%;
-	height: auto;
+.container {
+	width: 960px;
 	border: 1px solid red;
 }
 
-header h1 {
-	font-size: 60px;
-	font-weight: 100;
-	margin: 0;
-	padding: 0;
+header {
+	height: auto;
+	display: flex;
+	background-color: #FFF;
+	padding: 10px;
+}
+
+.header-right {
+	width: 50%;
+	border: 1px solid #CCC;
+	float: right;
+}
+
+.header-left {
+	width: 50%;
+	border: 1px solid #ccc;
+}
+
+.list-unstyled {
+	list-style: none;
+	padding: 10px;
+}
+
+.list-unstyled > li {
+	display: inline;
+	padding: 0 10px;
+	border-right: 1px solid #DDD;
+	cursor: pointer;
+}
+
+.list-unstyled > li:hover {
+	background-color: #DDC;
+}
+
+.header-right > img {
+	width: 36px;
+	height: 36px;
+	border-radius: 100%;
+	vertical-align: middle;
 }
 
 .nav-button {
 	color: black;
-
 }
 
 .menu-item {
@@ -45,13 +79,15 @@ header h1 {
 }
 
 main {
-	margin: 20px;
+	margin: 10px;
 	border: 1px solid #ccc;
 	height: 500px;
+	width: 100%;
 }
 
 footer {
-	height: 20px;
+	height: 50px;
+	background-color: #FFF;
 	position:fixed;
 	bottom: 0;
 	left: 0;

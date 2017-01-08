@@ -1,0 +1,7 @@
+.js-section {
+  display: none;
+}
+
+.is-shown {
+	display: block;
+}

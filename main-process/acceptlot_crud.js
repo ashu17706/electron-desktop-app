@@ -1,8 +1,9 @@
 'use strict';
 
-const Datastore = require('nedb');
-let db = null;
 const Q = require('q');
+const Datastore = require('nedb');
+
+let db = null;
 
 const AcceptLot = class AcceptLot {
   constructor() {
@@ -17,6 +18,7 @@ const AcceptLot = class AcceptLot {
     let deferred = Q.defer();
 
     db.insert(doc, (err, newDoc) => {
+      console.log(newDoc);
       if (err) {
         deferred.reject(err);
       } else {
@@ -29,7 +31,7 @@ const AcceptLot = class AcceptLot {
   read(id) {
     let deferred = Q.defer();
 
-    db.find({ _id: id }, (err, resDoc) => {
+    db.findOne({ _id: id }, (err, resDoc) => {
       if (err) {
         deferred.reject(err);
       } else {
@@ -66,14 +68,19 @@ const AcceptLot = class AcceptLot {
     return deferred.promise;
   };
 
+  // if noargs - returns all the records
   search(searchField, searchTerm) {
+    let deferred = Q.defer();
+
     let regex = new RegExp(searchTerm);
 
     let searchObj = {};
-    // { name: { $regex: /^as/ }}
-    searchObj[searchField] = { $regex: regex };
 
-    console.log(searchObj);
+    if (searchField && searchTerm) {
+      // { name: { $regex: /^as/ }}
+      searchObj[searchField] = { $regex: regex };
+    }
+
     db.find(searchObj, (err, results) => {
       if (err) {
         deferred.reject(err);
@@ -113,28 +120,11 @@ if (require.main == module) {
       if (op1 === op2) {
         console.log("ALL MEDS HAVE BEEN UPDATED SUCCESSFULLY", op1, op2);
       };
+
+      acceptlot.search()
+      .then((results) => console.log(results.length));
     })
     .catch((err) => {
       console.log(err);
     });
-
-    // check multi create with spread
-    // var medicined = [
-    //   { name: 'Paracetamol 11', expiry: '12/AUG/2016' },
-    //   { name: 'Paracetamol 12', expiry: '12/AUG/2016' },
-    // ];
-
-    // var promiseMed = [];
-    // function createMultiMeds() {
-    //   medicined.forEach((medicine) => {
-    //     promiseMed.push(addMed.create(medicine));
-    //   });
-    //   return Q.all(promiseMed);
-    // }
-    //
-    // createMultiMeds.spread((arg1, arg2) => {
-    //   console.log('newly created meds are', arg1 ,arg2);
-    // });
-
-
 }

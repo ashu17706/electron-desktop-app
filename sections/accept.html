@@ -1,0 +1,45 @@
+<template class="task-template">
+  <div class="pane-group js-section" id="accept-section">
+    <div class="pane sidebar" style="padding: 20px">
+      <form id="acceptForm">
+        <span class="form-group">
+          <label>PMSO No</label>
+          <input type="number" name="pmsono" class="form-control" placeholder="IMSO No"/>
+        </span>
+        <span class="form-group">
+          <label>Medicine Name</label>
+          <input type="name" name="name" class="form-control" placeholder="Medicine Name"/>
+        </span>
+        <span class="form-group">
+          <label>Quantity</label>
+          <input type="number" name="quantity" class="form-control" placeholder="Quantity"/>
+        </span>
+        <span class="form-group">
+          <label>Expiry Date</label>
+          <input type="date" name="expiry" class="form-control" placeholder="Expiry Date"/>
+        </span>
+        <span style="text-align: right">
+          <button class="btn btn-negative">Reset</button>
+          <button id="acceptAddBtn" class="btn btn-primary">Add</button>
+        </span>
+      </form>
+    </div>
+    <div class="pane" style="border: 1px solid #000">
+      <table class="table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Kind</th>
+            <th>File Size</th>
+          </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+      </table>
+    </div>
+    <script type="text/javascript">
+      require('./renderer-process/accept');
+    </script
+  </div>
+</template>

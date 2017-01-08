@@ -2,35 +2,54 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Electron boilerplate</title>
-		<link rel="stylesheet" href="index.css">
+		<title>Medical Application</title>
+		<link rel="stylesheet" href="photon.css">
+		<link rel="stylesheet" href="custom.css">
 
-		<link rel="import" href="sections/landing.html">
 		<link rel="import" href="sections/home.html">
 		<link rel="import" href="sections/dispatch.html">
-		<link rel="import" href="sections/receive.html">
+		<link rel="import" href="sections/accept.html">
 		<link rel="import" href="sections/demand.html">
-		<link rel="import" href="sections/addmed.html">
+
 	</head>
 	<body>
-		<div class="container">
-			<header>
-				<button id="button-landing" class="nav-button" data-section="landing">Landing Page</button>
-				<button id="button-home" class="nav-button" data-section="home">Home</button>
-				<button id="button-dispatch" class="nav-button" data-section="dispatch">Dispatch</button>
-				<button id="button-recieve" class="nav-button" data-section="receive">Receive</button>
-				<button id="button-demand" class="nav-button" data-section="demand">Demand</button>
-				<button id="button-addmed" class="nav-button" data-section="addmed">Add Med</button>
+		<div class="window">
+			<header class="toolbar toolbar-header">
+				<div class="toolbar-actions">
+
+					<button class="btn nav-btn btn-default" data-section="home">
+						<span class="icon icon-home icon-text"></span>
+						Home
+					</button>
+
+					<button class="btn nav-btn btn-default" data-section="accept">
+						<span class="icon icon-download icon-text"></span>
+						Accept Lot
+					</button>
+
+					<button class="btn nav-btn btn-default" data-section="dispatch">
+						<span class="icon icon-upload icon-text"></span>
+						Dispatch Lot
+					</button>
+
+					<button class="btn nav-btn btn-default" data-section="demand">
+						<span class="icon icon-doc-text icon-text"></span>
+						Demand Lot
+					</button>
+				</div>
 			</header>
-			<main class="content"></main>
-			<footer>
-				Footer
-			</footer>
+			<div class="window-content">
+
+			</div>
+			<footer class="toolbar toolbar-footer">
+		    <h1 class="title">Footer</h1>
+		  </footer>
 		</div>
 
 		<script>
 			require('./assets/import');
 			require('./assets/nav');
 		</script>
+
 	</body>
 </html>

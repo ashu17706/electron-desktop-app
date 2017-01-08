@@ -1,5 +1,35 @@
 <template class="task-template">
-  <section id="dispatch-section" class="js-section">
-    <span>dispatch</span>
-  </section>
+  <div class="pane-group js-section" id="dispatch-section">
+    <div class="pane sidebar">
+      <form style="padding: 20px">
+        <span class="form-group">
+          <label>PMSO No</label>
+          <input type="number" class="form-control" placeholder="IMSO No"/>
+        </span>
+        <span class="form-group">
+          <label>Medicine Name</label>
+          <input type="name" class="form-control" placeholder="Medicine Name"/>
+        </span>
+        <span class="form-group">
+          <label>Available Quantity</label>
+          <input type="number" class="form-control" placeholder="Quantity" disabled="true"/>
+        </span>
+        <span class="form-group">
+          <label>Dispatch Quantity</label>
+          <input type="number" class="form-control" placeholder="Quantity"/>
+        </span>
+        <span class="form-group">
+          <label>Expiry Date</label>
+          <input type="date" class="form-control" placeholder="Expiry Date" disabled="true"/>
+        </span>
+        <span style="text-align: right">
+          <button class="btn btn-negative">Reset</button>
+          <button class="btn btn-primary">Add</button>
+        </span>
+      </form>
+    </div>
+    <div class="pane">
+      
+    </div>
+  </div>
 </template>

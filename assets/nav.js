@@ -1,15 +1,14 @@
 document.body.addEventListener('click', function (event) {
   if (event.target.dataset.section) {
-    event.target.classList.add('is-selected');
+    hideAllSectionsAndDeselectButtons();
+
+    event.target.classList.add('btn-primary');
+
     handleSectionTrigger(event);
   }
 });
 
 function handleSectionTrigger(event) {
-  hideAllSectionsAndDeselectButtons();
-
-  event.target.classList.add('is-selected');
-
   const sectionId = event.target.dataset.section + '-section';
   document.getElementById(sectionId).classList.add('is-shown');
 }
@@ -20,8 +19,8 @@ function hideAllSectionsAndDeselectButtons() {
     section.classList.remove('is-shown');
   });
 
-  const buttons = document.querySelectorAll('.nav-button.is-selected');
+  const buttons = document.querySelectorAll('.btn.nav-btn');
   Array.prototype.forEach.call(buttons, function (button) {
-    button.classList.remove('is-selected');
+    button.classList.remove('btn-primary');
   });
 }

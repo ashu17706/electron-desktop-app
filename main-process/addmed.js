@@ -1,6 +1,7 @@
 const { ipcMain } = require('electron');
-const ADDMEDCRUD = require('./addmed_crud');
-const addMed = new ADDMEDCRUD();
+const AddMedCrud = require('./addmed_crud');
+
+const addMed = new AddMedCrud();
 
 ipcMain.on('add-medicine', (event, args) => {
   console.log('testing', args);

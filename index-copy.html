@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Electron boilerplate</title>
+		<link rel="stylesheet" href="index.css">
+		<link rel="stylesheet" href="photon.css">
+
+		<link rel="import" href="sections/landing.html">
+		<link rel="import" href="sections/home.html">
+		<link rel="import" href="sections/dispatch.html">
+		<link rel="import" href="sections/receive.html">
+		<link rel="import" href="sections/demand.html">
+		<link rel="import" href="sections/addmed.html">
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<div class="header-left">
+					<ul class="list-unstyled">
+						<li>Home</li>
+						<li>Dispatch</li>
+						<li>Receive</li>
+						<li>Demand</li>
+					</ul>
+				</div>
+				<div class="header-right">
+					<img />
+				</div>
+<!--
+				<button id="button-landing" class="nav-button" data-section="landing">Landing Page</button>
+				<button id="button-home" class="nav-button" data-section="home">Home</button>
+				<button id="button-dispatch" class="nav-button" data-section="dispatch">Dispatch</button>
+				<button id="button-recieve" class="nav-button" data-section="receive">Receive</button>
+				<button id="button-demand" class="nav-button" data-section="demand">Demand</button>
+				<button id="button-addmed" class="nav-button" data-section="addmed">Add Med</button> -->
+			</header>
+			<main class="content"></main>
+			<footer>
+				Footer
+			</footer>
+		</div>
+
+		<script>
+			require('./assets/import');
+			require('./assets/nav');
+		</script>
+	</body>
+</html>

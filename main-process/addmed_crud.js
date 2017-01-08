@@ -28,7 +28,7 @@ const Medicine = class Medicine {
   // find details of any medicine by id
   read(id) {
     let deferred = Q.defer();
-    db.find({ _id: id }, (err, resDoc) => {
+    db.findOne({ _id: id }, (err, resDoc) => {
       if (err) {
         deferred.reject(err);
       } else {
