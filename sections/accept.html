@@ -2,58 +2,57 @@
   <div class="pane-group js-section" id="accept-section">
     <div class="pane sidebar" style="padding: 20px">
       <form id="acceptForm">
-        <table>
-          <thead>
-            <tr><th>PMSO No.</th><th>Medicine Name</th><th>Quantity</th><th>Expiry Date</th></tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><input type="number" name="pmsono" class="form-control" placeholder="IMSO No"/></td>
-              <td><input type="name" name="name" class="form-control" placeholder="Medicine Name"/></td>
-              <td><input type="number" name="quantity" class="form-control" placeholder="Quantity"/></td>
-              <td><input type="date" name="expiry" class="form-control" placeholder="Expiry Date"/></td>
-            </tr>
-          </tbody>
-        </table>
-        <div class="pane" style="float: right">
-          <button class="btn btn-negative">Reset</button>
-          <button id="acceptAddBtn" class="btn btn-primary">Add</button>
+        <div class="pane">
+          <table>
+            <thead>
+              <tr>
+                <th><b>PMSO No.</b></th>
+                <th><b>Medicine Name</b></th>
+                <th><b>Quantity</b></th>
+                <th><b>Expiry Date</b></th>
+                <th><b>Reset</b></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="number" name="pmsono" class="form-control" placeholder="PMSO No"/></td>
+                <td><input type="name" name="name" class="form-control" placeholder="Medicine Name"/></td>
+                <td><input type="number" name="quantity" class="form-control" placeholder="Quantity"/></td>
+                <td><input type="date" name="expiry" class="form-control" placeholder="Expiry Date"/></td>
+                <td><button class="btn btn-negative">Reset</button></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <!--<span class="form-group">
-          <label>PMSO No</label>
-          <input type="number" name="pmsono" class="form-control" placeholder="IMSO No"/>
-        </span>
-        <span class="form-group">
-          <label>Medicine Name</label>
-          <input type="name" name="name" class="form-control" placeholder="Medicine Name"/>
-        </span>
-        <span class="form-group">
-          <label>Quantity</label>
-          <input type="number" name="quantity" class="form-control" placeholder="Quantity"/>
-        </span>
-        <span class="form-group">
-          <label>Expiry Date</label>
-          <input type="date" name="expiry" class="form-control" placeholder="Expiry Date"/>
-        </span>
-        <span style="text-align: right">
-          <button class="btn btn-negative">Reset</button>
-          <button id="acceptAddBtn" class="btn btn-primary">Add</button>
-        </span>-->
+        <hr />
+        <div class="pane" style="float: right">
+          <button id="acceptAddBtn" class="btn btn-primary" style="font-size:16px">Add</button>
+        </div>
       </form>
     </div>
     <div class="pane" style="border: 1px solid #000">
       <table class="table-striped">
         <thead>
-          <tr>
-            <th>Name</th>
-            <th>Kind</th>
-            <th>File Size</th>
-          </tr>
+          <tr><th>PMSO No.</th><th>Medicine Name</th><th>Quantity</th><th>Expiry Date</th><th>Remove</th></tr>
         </thead>
         <tbody>
-
+          <tr>
+            <td>123</td><td>med 1</td><td>333</td><td>2-Jan-2017</td>
+            <td>
+              <button class="btn btn-mini btn-negative"><span class="icon icon-cancel" style="color:white"></span></button>
+              </td>
+          </tr>
+          <tr>
+            <td>124</td><td>med 2</td><td>1</td><td>10-Jan-2017</td>
+            <td>
+              <button class="btn btn-mini btn-negative"><span class="icon icon-cancel" style="color:white"></span></button>
+              </td>
+          </tr>
         </tbody>
       </table>
+    </div>
+    <div class="pane">
+      <button id="subBtn" class="btn btn-negative" style="font-size:16px;float:right; margin:15px 15px 0 0">Submit</button>
     </div>
     <script type="text/javascript">
       require('./renderer-process/accept');
