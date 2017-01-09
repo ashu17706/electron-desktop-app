@@ -26,7 +26,6 @@
     "electron"
   ],
   "dependencies": {
-    "bootstrap": "^3.3.7",
     "electron-debug": "^1.0.0",
     "nedb": "^1.8.0",
     "q": "^1.4.1"
