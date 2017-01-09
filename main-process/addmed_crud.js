@@ -7,7 +7,7 @@ const Q = require('q');
 const Medicine = class Medicine {
   constructor() {
     db = new Datastore({
-      filename: '/Users/ashuthezero8/work/medical-electron-app/medicine.db',
+      filename: 'C:\\Users\\ashish.a.tripathi\\Documents\\Projects\\electron-desktop-app\\medicine.db',
       autoload: true,
     });
   };

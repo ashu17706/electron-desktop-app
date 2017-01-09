@@ -8,7 +8,7 @@ let db = null;
 const AcceptLot = class AcceptLot {
   constructor() {
     db = new Datastore({
-      filename: '/Users/ashuthezero8/work/medical-electron-app/acceptlot.db',
+      filename: 'C:\\Users\\ashish.a.tripathi\\Documents\\Projects\\electron-desktop-app\\acceptlot.db',
       autoload: true,
       timestampData: true,
     });

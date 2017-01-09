@@ -2,7 +2,24 @@
   <div class="pane-group js-section" id="accept-section">
     <div class="pane sidebar" style="padding: 20px">
       <form id="acceptForm">
-        <span class="form-group">
+        <table>
+          <thead>
+            <tr><th>PMSO No.</th><th>Medicine Name</th><th>Quantity</th><th>Expiry Date</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="number" name="pmsono" class="form-control" placeholder="IMSO No"/></td>
+              <td><input type="name" name="name" class="form-control" placeholder="Medicine Name"/></td>
+              <td><input type="number" name="quantity" class="form-control" placeholder="Quantity"/></td>
+              <td><input type="date" name="expiry" class="form-control" placeholder="Expiry Date"/></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="pane" style="float: right">
+          <button class="btn btn-negative">Reset</button>
+          <button id="acceptAddBtn" class="btn btn-primary">Add</button>
+        </div>
+        <!--<span class="form-group">
           <label>PMSO No</label>
           <input type="number" name="pmsono" class="form-control" placeholder="IMSO No"/>
         </span>
@@ -21,7 +38,7 @@
         <span style="text-align: right">
           <button class="btn btn-negative">Reset</button>
           <button id="acceptAddBtn" class="btn btn-primary">Add</button>
-        </span>
+        </span>-->
       </form>
     </div>
     <div class="pane" style="border: 1px solid #000">

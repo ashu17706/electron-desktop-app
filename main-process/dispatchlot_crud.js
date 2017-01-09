@@ -8,7 +8,7 @@ let db = null;
 const DispatchLot = class DispatchLot {
   constructor() {
     db = new Datastore({
-      filename: '/Users/ashuthezero8/work/medical-electron-app/dispatchlot.db',
+      filename: 'C:\\Users\\ashish.a.tripathi\\Documents\\Projects\\electron-desktop-app\\dispatchlot.db',
       autoload: true,
       timestampData: true,
     });
